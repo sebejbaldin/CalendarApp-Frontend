@@ -30,8 +30,8 @@ var fetch_links = {
 
 async function setSelectedCourse(course) {
     selected_course = course;
-    $('#btn-expand').trigger('click')
     saveSelectedCourse();
+    mobile_btn.click();
     await updateData(selected_course);
     load();
 }
@@ -406,6 +406,7 @@ async function showLessons() {
     } else {
         setSectionTimes(times);
     }
+    //mobile_btn.show();
     footer.show();
     loader.hide();
 }
@@ -432,6 +433,7 @@ async function showHome() {
     footer.hide();
     await setCourseHomeMenu(await getCourseList());
     loader.hide();
+    mobile_btn.click();
 }
 
 try {
