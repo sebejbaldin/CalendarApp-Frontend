@@ -32,7 +32,7 @@ async function setSelectedCourse(course) {
     selected_course = course;
     saveSelectedCourse();
     mobile_btn.click();
-    await updateData(selected_course);
+    updateData(selected_course, true);
     load();
 }
 
